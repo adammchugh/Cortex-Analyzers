@@ -1,0 +1,45 @@
+{
+  "name": "ElasticSearch_SearchIP",
+  "version": "1.0",
+  "author": "McHughSecurity",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Search Elasticsearch instance for IOC",
+  "dataTypeList": ["url"],
+  "command": "ElasticSearch/ElasticSearch.py",
+  "baseConfig": "ElasticSearch",
+  "config": {
+    "service": "Search_URL"
+  },
+  "configurationItems": [
+    {
+      "name": "es_cloudid",
+      "description": "Elasticsearch Cloud ID",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "es_user",
+      "description": "Elasticsearch Username",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "es_password",
+      "description": "Elasticsearch Password",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "polling_interval",
+      "description": "Define time interval between two requests attempts for the report",
+      "type": "number",
+      "multi": false,
+      "required": false,
+      "defaultValue": 60
+    }
+  ]
+}
